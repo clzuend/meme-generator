@@ -1,6 +1,4 @@
-"""
-Implements the Ingestor.
-"""
+"""Implements the Ingestor."""
 from typing import List
 
 from .QuoteModel import QuoteModel

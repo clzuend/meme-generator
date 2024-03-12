@@ -1,6 +1,4 @@
-"""
-Implements the QuoteModel.
-"""
+"""Implements the QuoteModel."""
 class QuoteModel():
     """
     A class to represent quotes.

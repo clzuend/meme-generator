@@ -1,6 +1,4 @@
-"""
-Implements the Flask app.
-"""
+"""Implements the Flask app."""
 import random
 import os
 import requests

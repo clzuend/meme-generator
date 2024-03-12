@@ -1,6 +1,4 @@
-"""
-Implements the CSVIngestor.
-"""
+"""Implements the CSVIngestor."""
 import pandas as pd
 from typing import List
 

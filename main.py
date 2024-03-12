@@ -1,6 +1,4 @@
-"""
-Implements the CLI interface.
-"""
+"""Implements the CLI interface."""
 import os
 import random
 from argparse import ArgumentParser

@@ -1,6 +1,4 @@
-"""
-Implements the MemeEngine.
-"""
+"""Implements the MemeEngine."""
 import os
 import imagehash
 from typing import Tuple
