@@ -28,13 +28,14 @@ def setup():
 
     imgs = []
     for root, dirs, files in os.walk(images_path):
-        if not '.ipynb_checkpoints' in root:
+        if '.ipynb_checkpoints' not in root:
             [imgs.append(os.path.join(root, name)) for name in files]
 
     return quotes, imgs
 
 
 quotes, imgs = setup()
+
 
 @app.route('/')
 def meme_rand():

@@ -6,6 +6,7 @@ from argparse import ArgumentParser
 from MemeEngine import MemeEngine
 from QuoteEngine import QuoteModel, Ingestor
 
+
 def generate_meme(path=None, body=None, author=None):
     """Generate a meme given an path and a quote."""
     img = None
@@ -15,7 +16,7 @@ def generate_meme(path=None, body=None, author=None):
         images = "./_data/photos/dog/"
         imgs = []
         for root, dirs, files in os.walk(images):
-            if not '.ipynb_checkpoints' in root:
+            if '.ipynb_checkpoints' not in root:
                 [imgs.append(os.path.join(root, name)) for name in files]
 
         img = random.choice(imgs)
