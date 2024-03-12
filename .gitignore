@@ -1,3 +1,4 @@
 /.DS_Store
 /.tempfile
 /.workspace-config.json
+**/__pycache__/
