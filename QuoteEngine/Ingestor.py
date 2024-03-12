@@ -12,7 +12,8 @@ from .CSVIngestor import CSVIngestor
 class Ingestor(IngestorInterface):
     """
     A class representing the Ingestor strategy.
-    It loops over Ingestors and selects one based on the document type.
+
+    Loops over Ingestors and selects one based on the document type.
 
     Attributes:
         ingestors : List -- allowed ingestors

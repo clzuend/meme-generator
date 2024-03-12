@@ -70,7 +70,11 @@ class MemeEngine():
 
     def load_image(self, img_path: str) -> None:
         """Load image from path into class attribute."""
-        self.image = Image.open(img_path)
+        try:
+            self.image = Image.open(img_path).convert('RGB')
+        except Exception:
+            print("Couldn't open image file. Using placeholder instead.")
+            self.image = Image.open('./assets/placeholder.png').convert('RGB')
 
     def resize_image(self, width: int) -> None:
         """Resize image to width."""
@@ -111,6 +115,7 @@ class MemeEngine():
         """
         file_name = imagehash.average_hash(self.image)
         out_path = os.path.join(self.base_path, f'meme_{file_name}.jpg')
+        print(out_path)
         self.image.save(out_path)
         return out_path
 

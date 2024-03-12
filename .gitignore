@@ -2,3 +2,4 @@
 /.tempfile
 /.workspace-config.json
 **/__pycache__/
+**/.DS_Store

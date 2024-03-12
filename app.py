@@ -59,14 +59,22 @@ def meme_post():
     author = request.form['author']
     body = request.form['body']
 
-    r = requests.get(image_url)
-    file_name = hashlib.sha256(r.content).hexdigest()
-    tmp = f'./tmp/{file_name}.png'
-    with open(tmp, 'wb') as img:
-        img.write(r.content)
+    try:
+        r = requests.get(image_url)
+        file_name = hashlib.sha256(r.content).hexdigest()
+        tmp = f'./tmp/{file_name}.png'
+        with open(tmp, 'wb') as img:
+            img.write(r.content)
+    except requests.exceptions.MissingSchema:
+        print("Missing URL or URL schema.")
+        tmp = './assets/placeholder.png'
+    except requests.exceptions.ConnectionError:
+        print("Invalid URL or Connection Issue.")
+        tmp = './assets/placeholder.png'
 
     path = meme.make_meme(tmp, body, author)
-    os.remove(tmp)
+    if tmp.startswith('./tmp/'):
+        os.remove(tmp)
 
     return render_template('meme.html', path=path)
 
