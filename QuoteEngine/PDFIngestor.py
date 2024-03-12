@@ -1,3 +1,6 @@
+"""
+Implements the PDFIngestor.
+"""
 import os
 import subprocess
 from typing import List
@@ -17,6 +20,7 @@ class PDFIngestor(IngestorInterface):
         can_ingest(path) -- Test if document can be ingested.
         parse(parse) -- Parse the document and ingest to QuoteModel.
     """
+    
     allowed_extensions = ['.pdf']
     
     @classmethod

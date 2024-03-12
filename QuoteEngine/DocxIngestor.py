@@ -1,3 +1,6 @@
+"""
+Implements the DocxIngestor.
+"""
 import docx
 from typing import List
 
@@ -15,6 +18,7 @@ class DocxIngestor(IngestorInterface):
         can_ingest(path) -- Test if document can be ingested.
         parse(parse) -- Parse the document and ingest to QuoteModel.
     """
+    
     allowed_extensions = ['.docx']
     
     @classmethod

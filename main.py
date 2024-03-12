@@ -1,3 +1,6 @@
+"""
+Implements the CLI interface.
+"""
 import os
 import random
 from argparse import ArgumentParser
@@ -6,7 +9,7 @@ from MemeEngine import MemeEngine
 from QuoteEngine import QuoteModel, Ingestor
 
 def generate_meme(path=None, body=None, author=None):
-    """ Generate a meme given an path and a quote """
+    """Generate a meme given an path and a quote."""
     img = None
     quote = None
 

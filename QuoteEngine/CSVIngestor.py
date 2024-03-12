@@ -1,3 +1,6 @@
+"""
+Implements the CSVIngestor.
+"""
 import pandas as pd
 from typing import List
 
@@ -15,6 +18,7 @@ class CSVIngestor(IngestorInterface):
         can_ingest(path) -- Test if document can be ingested.
         parse(parse) -- Parse the document and ingest to QuoteModel.
     """
+    
     allowed_extensions = ['.csv']
     
     @classmethod

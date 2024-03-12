@@ -1,3 +1,7 @@
+"""
+Implements the TextIngestor.
+"""
+
 from typing import List
 
 from .QuoteModel import QuoteModel
@@ -14,6 +18,7 @@ class TextIngestor(IngestorInterface):
         can_ingest(path) -- Test if document can be ingested.
         parse(parse) -- Parse the document and ingest to QuoteModel.
     """
+    
     allowed_extensions = ['.txt']
     
     @classmethod

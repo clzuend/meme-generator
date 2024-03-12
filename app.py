@@ -1,3 +1,6 @@
+"""
+Implements the Flask app.
+"""
 import random
 import os
 import requests

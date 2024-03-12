@@ -1,3 +1,6 @@
+"""
+Implements the IngestorInterface.
+"""
 from abc import ABC, abstractmethod
 from typing import List
 from os.path import splitext
@@ -15,6 +18,7 @@ class IngestorInterface(ABC):
         can_ingest(path) -- Test if document can be ingested.
         parse(path) -- Parse the document and ingest to QuoteModel.
     """
+    
     allowed_extensions = []
     
     @classmethod
